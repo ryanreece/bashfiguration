@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/var/www/earthmamaangelbaby.com/public_html.old/app/code/local/Mage/Sales/Model/Order/Pdf/Items/Invoice'
+let g:netrw_dirhist_2='/var/www/earthmamaangelbaby.com/public_html.old/app/code/local/Emab/Bios/Model/Mysql4/Bio'
+let g:netrw_dirhist_3='/var/spool/cron'
+let g:netrw_dirhist_4='/var/www/earthmamaangelbaby.com/public_html/app/code/core/Mage/Adminhtml/controllers/Sales/Order'
+let g:netrw_dirhist_5='/var/www/earthmamaangelbaby.com/public_html/app/code/core/Mage/Core/Model/Email'
+let g:netrw_dirhist_6='/home/reece/.vim'
