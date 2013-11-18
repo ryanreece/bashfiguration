@@ -9,6 +9,6 @@ A bash and vim setup that suits me. Feel free to fork if you like.
 * - `<C-hjkl>` will move between the various windows in vim
 
 ###### Bash
-* Numerous aliases to make managing ths sytem easier
+* Numerous aliases to make managing the system easier
 * A few custom functions
 
