@@ -1,3 +1,6 @@
+Bashfiguration
+==============
+
 A bash and vim setup that suits me. Feel free to fork if you like.
 
 ###### VIM
@@ -5,8 +8,8 @@ A bash and vim setup that suits me. Feel free to fork if you like.
 * Pathogen plugin, takes care of loading other plugins
 * NERDTree plugin, a great file manager while working in vim
 * Added custom mappings
-* - `<C-g>` toggles NERDTree
-* - `<C-hjkl>` will move between the various windows in vim
+	* `<C-g>` toggles NERDTree
+	* `<C-hjkl>` will move between the various windows in vim
 
 ###### Bash
 * Numerous aliases to make managing the system easier
