@@ -27,7 +27,7 @@ alias du='du -kh'       # Makes a more readable output.
 alias df='df -kTh'
 
 #alias ll="ls -l --group-directories-first"
-alias ls='ls -hF --color'  # add colors for filetype recognition
+alias ls='ls -hF'  # add colors for filetype recognition
 alias la='ls -Al'          # show hidden files
 alias lx='ls -lXB'         # sort by extension
 alias lk='ls -lSr'         # sort by size, biggest last
@@ -38,15 +38,14 @@ alias lm='ls -al |more'    # pipe through 'more'
 alias lr='ls -lR'          # recursive ls
 alias tree='tree -Csu'     # nice alternative to 'recursive ls'
 
-# Please tell me who and where I am on the system
 export PS1="[\u@\h \w]\\$ "
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 
 #------------------
 # Custom Functions
 #------------------
-
-# Let's display some information about the server, because why not?
 function serverinfo()
 {
     echo -e "\nServer information:" ; uname -a
@@ -57,8 +56,17 @@ function serverinfo()
     echo -e "\nFilesystem status :"; df -h
 }
 
-# An easy way to display detailed file listing
 function ll()
 {
 	ls -l "$@"| egrep "^d" ; ls -lXB "$@" 2>&-| \ egrep -v "^d|total ";
 }
+
+function gitstats()
+{
+	git log --author=$1 --shortstat $2 --since=$3 | \
+		awk '/^ [0-9]/ { f += $1; i += $4; d += $6 } \
+		END { printf(" %d files changed\n %d insertions(+)\n %d deletions(-)\n", f, i, d) }'
+}
+
+PATH=$PATH:$HOME/bin:$HOME/.rvm/bin
+
