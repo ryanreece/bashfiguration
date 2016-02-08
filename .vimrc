@@ -31,3 +31,6 @@ set noexpandtab
 
 " We all like line numbers
 set nu
+
+" Format git commit messages
+au FileType gitcommit set tw=72
